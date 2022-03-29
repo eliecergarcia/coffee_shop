@@ -1,6 +1,6 @@
 # coffee_shop
 
-A new Flutter project.
+Ejemplo basico de como usar provider en una app de flutter
 
 ## Getting Started
 
