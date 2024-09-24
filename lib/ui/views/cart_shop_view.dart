@@ -8,9 +8,7 @@ class CartShopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool _customTileExpanded = false;
     final coffee = Provider.of<CoffeeProvider>(context);
-    coffee.generateTotal();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
