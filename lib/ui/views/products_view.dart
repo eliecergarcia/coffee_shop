@@ -1,4 +1,4 @@
-import 'package:coffee_shop/model/coffee.dart';
+import 'package:coffee_shop/data/coffees.dart';
 import 'package:coffee_shop/provider/coffe_provider.dart';
 import 'package:coffee_shop/ui/shared/widgets/button_add_minus_cartshop.dart';
 import 'package:coffee_shop/ui/shared/widgets/button_option.dart';
@@ -17,63 +17,11 @@ class ProductsView extends StatefulWidget {
 }
 
 class _ProductsViewState extends State<ProductsView> {
-  Coffee coffeeChiapas = Coffee(
-      id: 0,
-      grind: 'Chiapas',
-      price: 190,
-      weight: 500,
-      description: '',
-      typeGrind: 'Molido Fino');
-  Coffee coffeeVeracruz = Coffee(
-      id: 1,
-      grind: 'Veracruz',
-      price: 190,
-      weight: 500,
-      description: '',
-      typeGrind: 'Molido Fino');
-
-  Coffee coffeePuebla = Coffee(
-      id: 2,
-      grind: 'Puebla',
-      price: 190,
-      weight: 500,
-      description: '',
-      typeGrind: 'Molido Fino');
-
-  Coffee coffeeOaxaca = Coffee(
-      id: 3,
-      grind: 'Oaxaca',
-      price: 190,
-      weight: 500,
-      description: '',
-      typeGrind: 'Molido Fino');
-
-  Coffee coffeeNayarit = Coffee(
-      id: 3,
-      grind: 'Nayarit',
-      price: 190,
-      weight: 500,
-      description: '',
-      typeGrind: 'Molido Fino');
-
   @override
   void initState() {
-    Provider.of<CoffeeProvider>(context, listen: false).addCoffee(
-      coffeeChiapas,
+    Provider.of<CoffeeProvider>(context, listen: false).addCoffees(
+      coffeeDatas,
     );
-    Provider.of<CoffeeProvider>(context, listen: false).addCoffee(
-      coffeeVeracruz,
-    );
-    Provider.of<CoffeeProvider>(context, listen: false).addCoffee(
-      coffeeOaxaca,
-    );
-    Provider.of<CoffeeProvider>(context, listen: false).addCoffee(
-      coffeePuebla,
-    );
-    Provider.of<CoffeeProvider>(context, listen: false).addCoffee(
-      coffeeNayarit,
-    );
-
     super.initState();
   }
 
